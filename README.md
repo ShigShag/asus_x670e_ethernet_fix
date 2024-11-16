@@ -87,7 +87,7 @@ function pci_reset {
 system_uptime=$(awk '{print int($1)}' /proc/uptime)
 
 # Get the latest dmesg timestamp for the specific error
-latest_error_timestamp=$(dmesg | grep "igc.*eno1: PCIe link lost, device now detached" | tail -1 | awk -F'[][ :]+*' '{split($2,a,"."); print a[1]}')
+latest_error_timestamp=$(dmesg | grep "igc.*: PCIe link lost, device now detached" | tail -1 | awk -F'[][ :]+*' '{split($2,a,"."); print a[1]}')
 
 # Convert latest_error_timestamp to integer seconds
 latest_error_seconds=$(echo $latest_error_timestamp | awk -F'.' '{print $1}')

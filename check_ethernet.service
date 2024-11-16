@@ -1,0 +1,11 @@
+# /etc/systemd/system/check_ethernet.service
+[Unit]
+Description=Check for Ethernet PCIe Link Failure
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/check_and_reset_ethernet.sh
+
+[Install]
+WantedBy=multi-user.target
