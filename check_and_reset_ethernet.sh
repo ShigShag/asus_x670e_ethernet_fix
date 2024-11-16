@@ -1,4 +1,5 @@
 #!/bin/bash
+# /usr/local/bin/check_and_reset_ethernet.sh
 
 # Log and timestamp files
 LOG_FILE="/var/log/reset_ethernet.log"
