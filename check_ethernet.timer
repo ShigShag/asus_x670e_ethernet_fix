@@ -1,3 +1,4 @@
+# /etc/systemd/system/check_ethernet.timer
 [Unit]
 Description=Runs Ethernet check every 2 seconds
 
