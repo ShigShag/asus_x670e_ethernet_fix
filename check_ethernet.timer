@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs Ethernet check every 2 seconds
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=2s
+AccuracySec=1us
+Unit=check_ethernet.service
+
+[Install]
+WantedBy=timers.target
